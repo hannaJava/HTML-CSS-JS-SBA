@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer/Seller</title>
+    <!-- bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+     rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
+     crossorigin="anonymous">
+     <!--Font-->
+     <script src="./Resources/fontawesome-free-6.2.0-web"></script>
+     <!--Custom Stylesheet-->
+     <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <!--Header section-->
+    <header>
+                <div class="col-md-4 col-12 text-center">
+                    <h2 class="my-md-3 site-title text-white">Buyer/Seller</h2>
+                </div> 
+                <div class="col-md-4 col-12 test-right">
+                </div>   
+            </div>
+        </div>
+        <!--navigation menu-->
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../views/login.html">Sign-in</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../views/signup.html">Create Account</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--search icon-->
+                  <div class="navbar-nav">
+                    <input type="text" class="form-control" placeholder="Search item to buy">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button">
+                        Search
+                      </button>
+                    </div>
+                  </div>
+              </nav>
+        </div>
+    </header>
+
+    <!--Main section-->
+    <main>
+       
+        <label for="Items" style="border:2px solid #45ccb8;">Choose an item:</label>
+
+<select name="laptop" id="laptop" style="border:2px solid #45ccb8;">
+  <option value="tablette">Laptop</option>
+  <option value="desktop">Desktop</option>
+  <option value="tablette">Tablette</option>
+  <option value="cell-phone">Cell Phone</option>
+  <option value="monitor">Monitor</option>
+</select>
+
+<br>
+<br>
+<button onclick="showTable()" name="Display Items">Display Items</button>
+        <table id="id-table" style="display: none;"  >
+            <tr>
+            <th style="margin:200px;">Item</th>
+            <th style="margin:200px;">Price</th>
+            <th style="margin:200px;">Amount</th>
+             </tr> 
+             <script src="../JS/main.js">    </script>
+            <script>
+             displayItems();
+             </script>
+        </table>
+        <video muted="" autoplay="" loop="">
+            <source src="../images/video.mp4" type="video/mp4">
+          </video>
+
+|   <br> <img src="../images/buyerSeller.png" alt="User Login Icon"> <br>
+    </main>
+
+    <!--Footer Section-->
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
+    crossorigin="anonymous"></script>
+</body>
+</html>

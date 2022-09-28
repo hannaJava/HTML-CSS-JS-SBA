@@ -45,7 +45,7 @@
                   </div>
                   <!--search icon-->
                   <div class="navbar-nav">
-                    <input type="text" class="form-control" placeholder="Search item to buy">
+                    <input type="text" class="form-control" placeholder="Search items to buy">
                     <div class="input-group-append">
                       <button class="btn btn-secondary" type="button">
                         Search
@@ -57,41 +57,58 @@
     </header>
 
     <!--Main section-->
-    <main>
-       
-        <label for="Items" style="border:2px solid #45ccb8;">Choose an item:</label>
-
-<select name="laptop" id="laptop" style="border:2px solid #45ccb8;">
-  <option value="tablette">Laptop</option>
-  <option value="desktop">Desktop</option>
-  <option value="tablette">Tablette</option>
-  <option value="cell-phone">Cell Phone</option>
-  <option value="monitor">Monitor</option>
-</select>
-
+    <main>  
+        <div>
+            <label for="Items">Choose an item:</label>
+            <select name="laptop" id="laptop" style="border:2px solid #45ccb8;">
+                 <option value="tablette">Laptop</option>
+                <option value="desktop">Desktop</option>
+                <option value="tablette">Tablette</option>
+                <option value="cell-phone">Cell Phone</option>
+                <option value="monitor">Monitor</option>
+            </select>
+        </div>
 <br>
 <br>
-<button onclick="showTable()" name="Display Items">Display Items</button>
+<button class="btn btn-secondary" onclick="showTable()" name="Display Items">Display Items</button>
         <table id="id-table" style="display: none;"  >
-            <tr>
-            <th style="margin:200px;">Item</th>
-            <th style="margin:200px;">Price</th>
-            <th style="margin:200px;">Amount</th>
-             </tr> 
+            <!-- <tr>
+            <th style="margin:200px;" scope="col">Item</th>
+            <th style="margin:200px;" scope="col">Price</th>
+            <th style="margin:200px;" scope="col">Amount</th>
+             </tr>  -->
+             <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Amount</th>
+                </tr>
+              </thead>
              <script src="./JS/main.js">    </script>
             <script>
              displayItems();
              </script>
         </table>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Price</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+          </table>
+
         <video muted="" autoplay="" loop="">
             <source src="./images/video.mp4" type="video/mp4">
           </video>
-
-|   <br> <img src="./images/buyerSeller.png" alt="User Login Icon"> <br>
     </main>
 
     <!--Footer Section-->
-    <footer></footer>
+    <footer>
+        <p>Our website allows people to buy and sell digital products over the internet rather than at a brick-and-mortar location</p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
     crossorigin="anonymous"></script>

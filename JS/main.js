@@ -1,3 +1,4 @@
+/** function to display existion items with qt>0 inside a table */
 function displayItems(){
     var list = [1,2,3,4,5];
     var items = ['laptop','desktop','tablette','cell phone','Monitor'];
@@ -22,7 +23,11 @@ function displayItems(){
     }  
 }
 
+/**function to display table */
 function showTable(){
     var table = document.getElementById("id-table");
     table.style.display='block';
 }
+
+/**first slider */
+    $(".slider-one").slick();

@@ -9,12 +9,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
      rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
      crossorigin="anonymous">
+     <!--slick slider-->
+     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
      <!--Font-->
      <script src="./Resources/fontawesome-free-6.2.0-web"></script>
      <!--Custom Stylesheet-->
      <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
+    <!--all scripts insertion-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!--jquery cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
     <!--Header section-->
     <header>
                 <div class="col-md-4 col-12 text-center">
@@ -58,39 +69,44 @@
 
     <!--Main section-->
     <main>  
-        <div>
+        <div class="container-fluid p-0">
+            <!--dropdown menu-->
+          <div>
             <label for="Items">Choose an item:</label>
             <select name="laptop" id="laptop" style="border:2px solid #45ccb8;">
-                 <option value="tablette">Laptop</option>
-                <option value="desktop">Desktop</option>
-                <option value="tablette">Tablette</option>
-                <option value="cell-phone">Cell Phone</option>
-                <option value="monitor">Monitor</option>
+              <option value="tablette">Laptop</option>
+              <option value="desktop">Desktop</option>
+              <option value="tablette">Tablette</option>
+              <option value="cell-phone">Cell Phone</option>
+              <option value="monitor">Monitor</option>
             </select>
-        </div>
-<br>
-<br>
-<button class="btn btn-secondary" onclick="showTable()" name="Display Items">Display Items</button>
-        <table id="id-table" style="display: none;"  >
+          </div>
+          <br>
+          <br>
+          <!--button to display table with existing items-->
+          <button class="btn btn-secondary" onclick="showTable()" name="Display Items">Display Items</button>
+          <!--insert table-->
+          <table id="id-table" class="table table-striped table-bordered" style="display: none;"  >
             <!-- <tr>
             <th style="margin:200px;" scope="col">Item</th>
             <th style="margin:200px;" scope="col">Price</th>
             <th style="margin:200px;" scope="col">Amount</th>
-             </tr>  -->
-             <thead>
-                <tr>
-                  <th scope="col">Item</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Amount</th>
-                </tr>
-              </thead>
-             <script src="./JS/main.js">    </script>
+            </tr>  -->
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Price</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <!--<script src="./js/main.js"></script>-->
             <script>
-             displayItems();
-             </script>
-        </table>
+              displayItems();
+            </script>
+          </table>
 
-        <table class="table">
+          <!--trying to insert table using bootstrap-->
+            <!-- <table class="table">
             <thead>
               <tr>
                 <th scope="col">Item</th>
@@ -98,19 +114,31 @@
                 <th scope="col">Amount</th>
               </tr>
             </thead>
-          </table>
-
-        <video muted="" autoplay="" loop="">
+          </table>-->
+          <!--insert video-->
+          <video muted="" autoplay="" loop="">
             <source src="./images/video.mp4" type="video/mp4">
           </video>
+          <!--first slider-->
+          <div class="site-slider">
+            <div class="slider-one">
+              <div>
+                <img src="./images/1.jpg" class="img-fluid" alt="banner1">
+              </div>
+              <div>
+                <img src="./images/3.jpg" class="img-fluid" alt="banner3">
+              </div>
+              <div>
+                <img src="./images/4.jpg" class="img-fluid" alt="banner3">
+              </div>
+            </div>
+          </div>
+        </div>
     </main>
 
     <!--Footer Section-->
     <footer>
         <p>Our website allows people to buy and sell digital products over the internet rather than at a brick-and-mortar location</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
-    crossorigin="anonymous"></script>
 </body>
 </html>
